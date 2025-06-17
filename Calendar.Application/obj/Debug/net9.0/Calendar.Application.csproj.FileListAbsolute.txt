@@ -1,0 +1,16 @@
+C:\Users\Abylai\CalendarApp\Calendar.Application\bin\Debug\net9.0\Calendar.Application.deps.json
+C:\Users\Abylai\CalendarApp\Calendar.Application\bin\Debug\net9.0\Calendar.Application.dll
+C:\Users\Abylai\CalendarApp\Calendar.Application\bin\Debug\net9.0\Calendar.Application.pdb
+C:\Users\Abylai\CalendarApp\Calendar.Application\bin\Debug\net9.0\Calendar.Domain.dll
+C:\Users\Abylai\CalendarApp\Calendar.Application\bin\Debug\net9.0\Calendar.Domain.pdb
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.csproj.AssemblyReference.cache
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.AssemblyInfoInputs.cache
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.AssemblyInfo.cs
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.csproj.CoreCompileInputs.cache
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.sourcelink.json
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.833D0BE5.Up2Date
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.dll
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\refint\Calendar.Application.dll
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.pdb
+C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\ref\Calendar.Application.dll
