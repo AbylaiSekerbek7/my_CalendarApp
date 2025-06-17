@@ -22,6 +22,15 @@ builder.Services.AddControllers()
 });;
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 var provider = new FileExtensionContentTypeProvider();
@@ -37,6 +46,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 // Промежуточное ПО
+app.UseCors("AllowAll");
 app.UseAuthorization();
 app.MapControllers();
 
