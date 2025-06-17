@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Calendar.Infrastructure;
 using Calendar.Application.Interfaces;
-using Calendar.Application.Services; // Здесь должна быть реализация ParticipantService
+using Calendar.Application.Services;
+using Microsoft.AspNetCore.StaticFiles; // Здесь должна быть реализация ParticipantService
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+var provider = new FileExtensionContentTypeProvider();
+provider.Mappings[".yaml"] = "application/x-yaml";
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = provider
+});
 
 // Подключение Swagger
 app.UseSwagger();
@@ -31,6 +39,5 @@ app.UseSwaggerUI();
 // Промежуточное ПО
 app.UseAuthorization();
 app.MapControllers();
-app.UseStaticFiles();
 
 app.Run();

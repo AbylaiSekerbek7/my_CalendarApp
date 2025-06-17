@@ -9,9 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://localhost:5001/openapi.yaml"
+    "url": "http://localhost:5015/openapi.yaml"
   },
-  "logo_url": "https://localhost:5001/logo.png",
+  "logo_url": "http://localhost:5015/logo.png",
   "contact_email": "support@calendar.local",
-  "legal_info_url": "https://localhost:5001/legal"
+  "legal_info_url": "http://localhost:5015/legal"
 }
