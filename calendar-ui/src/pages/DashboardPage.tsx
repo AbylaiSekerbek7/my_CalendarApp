@@ -84,44 +84,52 @@ export default function DashboardPage() {
   };
 
 const handleAddParticipant = async () => {
-  if (!newParticipantName.trim()) return;
+  if (!newParticipantName.trim() || !selectedEvent?.id) return;
 
   try {
-    // 1. Получаем список пользователей по имени
-    const usersResponse = await fetch(`http://localhost:5015/api/v1/users?name=${encodeURIComponent(newParticipantName)}`);
-    const users = await usersResponse.json();
+    // 1. Получаем всех пользователей
+    const usersResponse = await fetch("http://localhost:5015/api/v1/users");
+    const allUsersResponse = await usersResponse.json();
+    const users = allUsersResponse?.$values || [];
 
-    if (!Array.isArray(users) || users.length === 0) {
+    // 2. Находим по имени
+    const user = users.find(
+      (u) => u.name.toLowerCase() === newParticipantName.trim().toLowerCase()
+    );
+
+    if (!user) {
       alert("User not found");
       return;
     }
 
-    const user = users[0]; // берем первого найденного
     const userId = user.id;
 
-    // 2. Создаем участника
-    const response = await fetch(`http://localhost:5015/api/v1/events/${eventId}/participants`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        userId: userId
-      }),
-    });
+    // 3. Создаём участника
+    const response = await fetch(
+      `http://localhost:5015/api/v1/events/${selectedEvent.id}/participants`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId }),
+      }
+    );
 
     if (response.ok) {
       alert("Participant added!");
       setNewParticipantName("");
-      await loadParticipants(); // перезагрузи список
+      await handleLoadParticipants(selectedEvent.id);
     } else {
-      const text = await response.text();
-      console.error("Add participant failed:", text);
-      alert("Failed to add participant");
+      const errorText = await response.text();
+      console.error("Server error:", errorText);
+      alert("Failed to add participant.");
     }
   } catch (err) {
     console.error("Unexpected error:", err);
-    alert("Unexpected error");
+    alert("Something went wrong.");
   }
 };
+
+
 
 
   return (
