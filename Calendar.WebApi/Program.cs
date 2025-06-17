@@ -11,6 +11,7 @@ builder.Services.AddDbContext<CalendarDbContext>(options =>
 
 // Регистрация сервисов
 builder.Services.AddScoped<IParticipantService, ParticipantService>();
+builder.Services.AddScoped<IAvailabilityService, AvailabilityService>();
 
 // Добавление контроллеров и Swagger
 builder.Services.AddControllers()
