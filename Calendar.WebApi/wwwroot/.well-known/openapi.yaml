@@ -1,0 +1,105 @@
+openapi: 3.0.1
+info:
+  title: Calendar API
+  version: 1.0.0
+  description: API for managing events, users, participants, and time slots.
+servers:
+  - url: https://localhost:5001
+paths:
+  /api/v1/events:
+    get:
+      summary: Get all events
+      responses:
+        '200':
+          description: List of events
+    post:
+      summary: Create a new event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '201':
+          description: Event created
+  /api/v1/events/{id}:
+    put:
+      summary: Update an event
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '204':
+          description: Event updated
+    delete:
+      summary: Delete an event
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Event deleted
+  /api/v1/events/{eventId}/participants:
+    get:
+      summary: Get participants for an event
+      parameters:
+        - in: path
+          name: eventId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of participants
+    post:
+      summary: Add participant to event
+      parameters:
+        - in: path
+          name: eventId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Participant'
+      responses:
+        '201':
+          description: Participant added
+components:
+  schemas:
+    Event:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        startTime:
+          type: string
+          format: date-time
+        endTime:
+          type: string
+          format: date-time
+    Participant:
+      type: object
+      properties:
+        userId:
+          type: string
+        role:
+          type: string

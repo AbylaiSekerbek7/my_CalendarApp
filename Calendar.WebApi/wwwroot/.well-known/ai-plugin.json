@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Calendar Assistant",
+  "name_for_model": "calendar_assistant",
+  "description_for_human": "Manage events and participants in your calendar.",
+  "description_for_model": "Use this plugin to manage events, users, participants, and availability for scheduling.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://localhost:5001/openapi.yaml"
+  },
+  "logo_url": "https://localhost:5001/logo.png",
+  "contact_email": "support@calendar.local",
+  "legal_info_url": "https://localhost:5001/legal"
+}

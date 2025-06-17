@@ -31,5 +31,6 @@ app.UseSwaggerUI();
 // Промежуточное ПО
 app.UseAuthorization();
 app.MapControllers();
+app.UseStaticFiles();
 
 app.Run();
