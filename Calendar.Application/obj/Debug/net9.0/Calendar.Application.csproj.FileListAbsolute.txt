@@ -14,3 +14,5 @@ C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Appli
 C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\refint\Calendar.Application.dll
 C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\Calendar.Application.pdb
 C:\Users\Abylai\CalendarApp\Calendar.Application\obj\Debug\net9.0\ref\Calendar.Application.dll
+C:\Users\Abylai\CalendarApp\Calendar.Application\bin\Debug\net9.0\Calendar.Infrastructure.dll
+C:\Users\Abylai\CalendarApp\Calendar.Application\bin\Debug\net9.0\Calendar.Infrastructure.pdb

@@ -825,7 +825,8 @@
       "System.Threading.Channels/7.0.0": {},
       "Calendar.Application/1.0.0": {
         "dependencies": {
-          "Calendar.Domain": "1.0.0"
+          "Calendar.Domain": "1.0.0",
+          "Calendar.Infrastructure": "1.0.0"
         },
         "runtime": {
           "Calendar.Application.dll": {
