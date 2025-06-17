@@ -1,22 +1,15 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
-import EventsPage from "./pages/EventsPage"; // создадим позже
+import DashboardPage from "./pages/DashboardPage";
 
 function App() {
-  const user = JSON.parse(localStorage.getItem("user") || "null");
-
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route
-          path="/events"
-          element={user ? <EventsPage /> : <Navigate to="/login" replace />}
-        />
-        <Route path="*" element={<Navigate to={user ? "/events" : "/login"} />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
-
 export default App;
