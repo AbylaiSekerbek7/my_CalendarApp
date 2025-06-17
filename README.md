@@ -7,10 +7,11 @@ A full-featured web application for managing events, participants, and finding s
 ## 🔧 Features
 
 - 📅 CRUD operations for **Events**
-- 👥 Add / Remove **Participants**
+- 👥 Add / Remove **Participants** (some parts not working sorry, backend everything is ok)
 - ⏰ Find common available time slots for all participants
 - 🔐 Basic authentication (WIP)
 - 🧠 Bonus: LLM Integration (e.g., GitHub Copilot-like prompts)
+- Testing
 
 ---
 
@@ -36,5 +37,9 @@ A full-featured web application for managing events, participants, and finding s
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourname/calendar-app.git
+git clone [https://github.com/yourname/calendar-app.git](https://github.com/AbylaiSekerbek7/my_CalendarApp)
 cd calendar-app
+
+
+Made by Abylai Sekerbek 
+git: https://github.com/AbylaiSekerbek7
