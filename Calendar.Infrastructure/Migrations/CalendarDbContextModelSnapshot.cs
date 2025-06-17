@@ -43,15 +43,21 @@ namespace Calendar.Infrastructure.Migrations
 
             modelBuilder.Entity("Calendar.Domain.Entities.Participant", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("EventId")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("UserId", "EventId");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("EventId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Participants");
                 });

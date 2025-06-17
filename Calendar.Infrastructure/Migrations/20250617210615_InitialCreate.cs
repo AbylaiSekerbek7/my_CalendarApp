@@ -43,12 +43,13 @@ namespace Calendar.Infrastructure.Migrations
                 name: "Participants",
                 columns: table => new
                 {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     UserId = table.Column<Guid>(type: "TEXT", nullable: false),
                     EventId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Participants", x => new { x.UserId, x.EventId });
+                    table.PrimaryKey("PK_Participants", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Participants_Events_EventId",
                         column: x => x.EventId,
@@ -67,6 +68,11 @@ namespace Calendar.Infrastructure.Migrations
                 name: "IX_Participants_EventId",
                 table: "Participants",
                 column: "EventId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Participants_UserId",
+                table: "Participants",
+                column: "UserId");
         }
 
         /// <inheritdoc />
