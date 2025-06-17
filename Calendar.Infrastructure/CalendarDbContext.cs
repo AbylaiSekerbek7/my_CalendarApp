@@ -15,7 +15,7 @@ public class CalendarDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         _ = modelBuilder.Entity<Participant>()
-            .HasKey(p => new { p.UserId, p.EventId });
+        .HasKey(p => p.Id);
 
         _ = modelBuilder.Entity<Participant>()
             .HasOne(p => p.User)
