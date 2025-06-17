@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\Abylai\\CalendarApp\\Calendar.Domain\\Calendar.Domain.csproj": {
                 "projectPath": "C:\\Users\\Abylai\\CalendarApp\\Calendar.Domain\\Calendar.Domain.csproj"
+              },
+              "C:\\Users\\Abylai\\CalendarApp\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Abylai\\CalendarApp\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj"
               }
             }
           }

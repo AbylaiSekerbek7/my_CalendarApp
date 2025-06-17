@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Calendar.Domain\Calendar.Domain.csproj" />
+    <ProjectReference Include="..\Calendar.Infrastructure\Calendar.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
