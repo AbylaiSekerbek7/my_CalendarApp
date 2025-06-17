@@ -6,5 +6,5 @@ public class Participant
     public User User { get; set; } = default!;
 
     public Guid EventId { get; set; }
-    public Event Event { get; set; } = default!;
+    public CalendarEvent Event { get; set; } = default!;
 }
