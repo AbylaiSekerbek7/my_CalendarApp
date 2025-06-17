@@ -1,4 +1,3 @@
-// DTOs/ParticipantDto.cs
 namespace Calendar.Application.DTOs;
 
 public class ParticipantDto
