@@ -239,6 +239,9 @@
               },
               "C:\\Users\\Abylai\\CalendarApp\\Calendar.Domain\\Calendar.Domain.csproj": {
                 "projectPath": "C:\\Users\\Abylai\\CalendarApp\\Calendar.Domain\\Calendar.Domain.csproj"
+              },
+              "C:\\Users\\Abylai\\CalendarApp\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Abylai\\CalendarApp\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj"
               }
             }
           }
@@ -259,6 +262,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.12.0, )"

@@ -40,6 +40,13 @@ public class AvailabilityService : IAvailabilityService
             busyByUser[e.UserId].Add((e.StartTime, e.EndTime));
         }
 
+        Console.WriteLine("Loaded Events:");
+        foreach (var e in events)
+        {
+            Console.WriteLine($"User: {e.UserId}, Event: {e.StartTime:HH:mm} - {e.EndTime:HH:mm}");
+        }
+
+
         var workingStart = new TimeSpan(9, 0, 0);
         var workingEnd = new TimeSpan(18, 0, 0);
 
@@ -52,10 +59,10 @@ public class AvailabilityService : IAvailabilityService
             var workEndTime = currentDay + workingEnd;
 
             var slotStart = workStartTime;
-            while (slotStart + slotDuration <= workEndTime)
-            {
-                var slotEnd = slotStart + slotDuration;
+            var slotEnd = slotStart + slotDuration;
 
+            while (slotEnd <= workEndTime && slotEnd <= to)
+            {
                 bool allFree = userIds.All(userId =>
                     !busyByUser[userId].Any(busy =>
                         slotStart < busy.Item2 && slotEnd > busy.Item1));
@@ -63,9 +70,11 @@ public class AvailabilityService : IAvailabilityService
                 if (allFree)
                 {
                     slots.Add(new TimeSlot { Start = slotStart, End = slotEnd });
+                    Console.WriteLine($"Slot found: {slotStart:HH:mm} - {slotEnd:HH:mm}");
                 }
 
                 slotStart = slotStart.AddMinutes(15);
+                slotEnd = slotStart + slotDuration;
             }
 
             currentDay = currentDay.AddDays(1);

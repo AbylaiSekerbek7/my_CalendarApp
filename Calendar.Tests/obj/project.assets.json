@@ -75,6 +75,24 @@
       "Microsoft.EntityFrameworkCore.Analyzers/9.0.6": {
         "type": "package"
       },
+      "Microsoft.EntityFrameworkCore.InMemory/9.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.6",
+          "Microsoft.Extensions.Caching.Memory": "9.0.6",
+          "Microsoft.Extensions.Logging": "9.0.6"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/9.0.6": {
         "type": "package",
         "dependencies": {
@@ -1116,6 +1134,21 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.InMemory/9.0.6": {
+      "sha512": "y7cpyB/aYVi4VZiVoUcIA2vQLlypQv1wGmly47RwXvPX15S15mooBsxyVmw3BShBXbdnK5wxfslihIoXzplnGg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/9.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.9.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Relational/9.0.6": {
       "sha512": "Ht6OT17sYnO31Dx+hX72YHrc5kZt53g5napaw0FpyIekXCvb+gUVvufEG55Fa7taFm8ccy0Vzs+JVNR9NL0JlA==",
       "type": "package",
@@ -2092,6 +2125,8 @@
     "net9.0": [
       "Calendar.Application >= 1.0.0",
       "Calendar.Domain >= 1.0.0",
+      "Calendar.Infrastructure >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 9.0.6",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -2130,6 +2165,9 @@
             },
             "C:\\Users\\Abylai\\CalendarApp\\Calendar.Domain\\Calendar.Domain.csproj": {
               "projectPath": "C:\\Users\\Abylai\\CalendarApp\\Calendar.Domain\\Calendar.Domain.csproj"
+            },
+            "C:\\Users\\Abylai\\CalendarApp\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Abylai\\CalendarApp\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj"
             }
           }
         }
@@ -2150,6 +2188,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[9.0.6, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.12.0, )"

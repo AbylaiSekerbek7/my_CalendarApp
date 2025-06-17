@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aggZS3wwHVI=",
+  "dgSpecHash": "6L6zqSTv0W8=",
   "success": true,
   "projectFilePath": "C:\\Users\\Abylai\\CalendarApp\\Calendar.Tests\\Calendar.Tests.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Abylai\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.6\\microsoft.entityframeworkcore.9.0.6.nupkg.sha512",
     "C:\\Users\\Abylai\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.6\\microsoft.entityframeworkcore.abstractions.9.0.6.nupkg.sha512",
     "C:\\Users\\Abylai\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.6\\microsoft.entityframeworkcore.analyzers.9.0.6.nupkg.sha512",
+    "C:\\Users\\Abylai\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\9.0.6\\microsoft.entityframeworkcore.inmemory.9.0.6.nupkg.sha512",
     "C:\\Users\\Abylai\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.6\\microsoft.entityframeworkcore.relational.9.0.6.nupkg.sha512",
     "C:\\Users\\Abylai\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\9.0.6\\microsoft.entityframeworkcore.sqlite.9.0.6.nupkg.sha512",
     "C:\\Users\\Abylai\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\9.0.6\\microsoft.entityframeworkcore.sqlite.core.9.0.6.nupkg.sha512",
